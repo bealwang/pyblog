@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}博客{% endblock %}
+
+{% block beforehead %}
+
+
+<script>
+</script>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="uk-width-medium-3-4">
+        <div class="uk-accordion" data-uk-accordion>
+            <!--
+            <h3 class="uk-accordion-title">Heading</h3>
+            <div class="uk-accordion-content">
+                <p>再不行</p>
+                <p>再不行</p>
+                <p>再不行</p>
+            </div>
+
+            <h3 class="uk-accordion-title">Heading</h3>
+            <div class="uk-accordion-content">
+                <p>我就去</p>
+                <p>我就去</p>
+                <p>我就去</p>
+            </div>
+
+            <h3 class="uk-accordion-title">Headin</h3>
+            <div class="uk-accordion-content">日狗！！！</div>
+            -->
+
+            {%for f in foo%}
+                <h3 class="uk-accordion-title">{{f[0]}}</h3>
+                <div class="uk-accordion-content">
+                {%for l in f[1:]%}
+                    <p>{{l}}</p>
+                {%endfor%}
+                </div>
+            {%endfor%}
+        
+        </div>
+    </div> 
+
+    <div class="uk-width-medium-1-4">
+        <div class="uk-panel uk-panel-header">
+            <h3 class="uk-panel-title">友情链接</h3>
+            <ul class="uk-list uk-list-line">
+                <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="">1</a></li>
+                <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="">2</a></li>
+                <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="">3</a></li>
+                <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="">4</a></li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
