@@ -12,9 +12,7 @@ from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
 from jinja2 import Environment, FileSystemLoader
-from datetime import datetime
 from plugin import highlight, toc, meta
-import plugin.tool as tool
 
 def init_jinja2(**kw):
     logging.info('init jinja2...')
@@ -28,30 +26,39 @@ def init_jinja2(**kw):
             )
     path = kw.get('path', None)
     if path is None:
-        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
+        path = ('../www/templates')
     logging.info('set jinja2 template path: %s' % path)
     env = Environment(loader=FileSystemLoader(path), **options)
-    filters = kw.get('filters', None)
-    if filters is not None:
-        for name, f in filters.items():
-            env.filters[name] = f
     return env
 
-def datetime_filter(t):
-    dt = datetime.fromtimestamp(t)
-    return '%syear %smonth %sday' % (dt.year, dt.month, dt.day)
+def get_file(path='../www/html/'):
+    list_files = os.listdir(path)
+    dirname = [x for x in list_files if os.path.isdir(path+x)]
+    files = []
+    for dir in dirname:
+        temp_files = os.listdir(path+dir)
+        dir_files = list(filter(lambda x: x.endswith('.html'),temp_files))
+        if dir_files:
+            dir_files = map(lambda x: os.path.splitext(x)[0],dir_files)
+            dir_files.insert(0,dir)
+            files.append(dir_files)
+    return files
 
-a = [['flor1','one','tow'],['flor2','three','four']]
-args = dict(foo = a)
-env = init_jinja2(filters = dict(datetime = datetime_filter))
-html = env.get_template('blogs.html').render(**args)
-try:
-    _pwd = './html/test.html'
-    _dir = os.path.dirname(_pwd)
-    if not os.path.exists(_dir):
-        os.makedirs(_dir)
-    f = open(_pwd, 'w')
-    f.write(html)
-except:
-    tool.log('error')('html dir not found')
+def render_template(template_name, args):
+    env = init_jinja2()
+    html = env.get_template(template_name+'.html').render(**args)
+    try:
+        _pwd = '../www/html/'+template_name+'.html'
+        _dir = os.path.dirname(_pwd)
+        if not os.path.exists(_dir):
+            os.makedirs(_dir)
+        f = open(_pwd, 'w')
+        f.write(html)
+    except:
+        logging.error('html dir not found')
 
+
+if __name__ == '__main__':
+    args = dict(foo = get_file())
+    render_template('blogs', args)
+    render_template('blog', args)
