@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Genialwang{% endblock %}
+{% block beforecss %}
+    <link rel="stylesheet" href="./static/css/uikit.almost-flat.min.css" />
+    <link rel="stylesheet" href="./static/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./static/css/font-awesome-ie7.min.css" />
+    <link rel="stylesheet" href="./static/css/genialwang.css" />
+    <link rel="stylesheet" href="./static/css/components/sticky.almost-flat.min.css" />
+    <link rel="stylesheet" href="./static/css/components/accordion.css" />
+{% endblock %}
+
+{% block content %}
+    <div class="uk-grid">
+        <div class="uk-width-medium-3-4">
+            <ul id="accordion" class="accordion">
+                {%for f in foo%}
+		        <li>
+                <div class="link"><i class="fa fa-paint-brush"></i>{{f[0]}}<i class="fa fa-chevron-down"></i></div>
+			        <ul class="submenu">
+                    {%for l in f[1:]%}
+                    <li><a href="./html/{{f[0]}}/{{l}}.html">{{l}}</a></li>
+                    {%endfor%}
+			        </ul>
+		        </li>
+                {%endfor%}
+            </ul>
+        </div>
+
+        <div class="uk-width-medium-1-4">
+            <div class="uk-panel uk-panel-header">
+                <h3 class="uk-panel-title">友情链接</h3>
+                <ul class="uk-list uk-list-line">
+                    <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="">1</a></li>
+                    <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="">2</a></li>
+                    <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="">3</a></li>
+                    <li><i class="uk-icon-thumbs-o-up"></i> <a target="_blank" href="">4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block endjs %}
+    <script src="./static/js/jquery.min.js"></script>
+    <script src="./static/js/uikit.min.js"></script>
+    <script src="./static/js/components/sticky.min.js"></script>
+    <script src="./static/js/components/google_analytics.js"></script>
+    <script src="./static/js/components/accordion.js"></script>
+{% endblock %}
