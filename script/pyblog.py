@@ -48,7 +48,7 @@ def render_template(template_name, args):
     env = init_jinja2()
     html = env.get_template(template_name+'.html').render(**args)
     try:
-        if 'index' == template_name:
+        if 'index' == template_name or 'aboutme' == template_name:
             _pwd = '../www/'+template_name+'.html'
         else:
             _pwd = '../www/html/blog/'+template_name+'.html'
@@ -64,4 +64,5 @@ def render_template(template_name, args):
 if __name__ == '__main__':
     args = dict(foo = get_file())
     render_template('blog', args)
+    render_template('aboutme', args)
     render_template('index', args)
