@@ -44,7 +44,6 @@
                         </li>
                     </ul>
                 </div>
-                <button>返回 p 元素的背景色</button>
                 <!--
                 <div class="uk-panel uk-panel-box" data-uk-sticky="{top:100}">
                     <ul class = "uk-dotnav uk-flex-column" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}" >
@@ -82,7 +81,7 @@
                     <h3 class = "uk-panel-title">Title</h3>
                     <div class="uk-panel-badge uk-badge">
                     </div>
-                    <p>
+                    <div class="title">
                         ihajhgoiaerhbrandljahglaerngoagbriabrgbariughaehgruibgfoahgvruaherguhsrguhapeorgheiaurgpaehrg
                         rajgrnepsgre;rngiwhrghwurehg;aobngfiobroefvniagdabfrviuorgba;gghorghwehgfpqhgrwebrlg
                         tadhgjfndlbasrghergrfshrgubfelbgjadgiaehrg;snerilgaeprhganrghaegruareg
@@ -130,7 +129,7 @@
                         tadhgjfndlbasrghergrfshrgubfelbgjadgiaehrg;snerilgaeprhganrghaegruareg
                         tadhgjfndlbasrghergrfshrgubfelbgjadgiaehrg;snerilgaeprhganrghaegruareg
                         tadhgjfndlbasrghergrfshrgubfelbgjadgiaehrg;snerilgaeprhganrghaegruareg
-                    </p>
+                    </div>
                 </div>
 
                 <div class = "uk-panel uk-panel-box" id="bottom">
@@ -182,15 +181,14 @@
     <script src="../../static/js/uikit.min.js"></script>
     <script src="../../static/js/components/sticky.min.js"></script>
     <script src="../../static/js/components/smooth-scroll.min.js"></script>
-    <script src="../../static/js/components/scrollspy.min.js"></script>
+    <script src="../../static/js/components/scrollspy.js"></script>
     <script src="../../static/js/genialwang.js"></script>
     <script src="../../static/js/components/accordion.js"></script>
     <script src="../../static/js/components/google_analytics.js"></script>
     <script>
-    console.log($(".title").attr("id"));
-    $('[data-uk-scrollspy]').on('uk.scrollspy.inview', function(){
+    $('[data-uk-scrollspy]').on('inview.uk.scrollspy', function(){
         // custom code...
-        console.log($(".title").attr("id"));
+        $(".title").css("background-color","yellow");
     });
     </script>
 
