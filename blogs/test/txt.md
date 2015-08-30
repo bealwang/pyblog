@@ -3,15 +3,7 @@ tags:nihao
 ---
 
 # MEHI
-{{ btn('hahack', 'http://hahack.com', 'info') }}
-Mouse Embryo Heart Imagery 
-  
-   ╯　　　 　╰   
-  ●　　　 　 ●   
-  " 　 　^　　"  
-  
-[![Build Status](https://travis-ci.org/septicmk/MEHI.svg)](https://travis-ci.org/septicmk/MEHI)
-
+{{ btn('点我', 'http://hahack.com', 'primary') }}
 ## About
 
 MEHI is a python library for processing large-scale 3D spatial and temporal mouse embryo date. the paralleled version is built on Spark.

@@ -1,5 +1,5 @@
 {% macro btn(value, link, type='info') -%}
-<a class="btn btn-{{type}}" href="{{link}}" target="_blank" rel="external">{{value}}</a>
+<a href="{{link}}" target="_blank"><button class="uk-button uk-button-{{type}}" type="button">{{value}}</button></a>
 {%- endmacro %}
 
 {% macro label(value, type='info') -%}

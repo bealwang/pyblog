@@ -1,4 +1,4 @@
 title:ttt
-categories:Test
+tags:Test
 ---
 jjjjjjj

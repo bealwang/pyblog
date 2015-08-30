@@ -1,5 +1,5 @@
 title:txt
-categories:Test2
+tags:Test2
 ---
 asdffasdf
 

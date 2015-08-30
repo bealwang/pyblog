@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="../../static/css/uikit.almost-flat.min.css" />
     <link rel="stylesheet" href="../../static/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../../static/css/font-awesome-ie7.min.css" />
-    <link rel="stylesheet" href="../../static/css/genialwang.css" />
     <link rel="stylesheet" href="../../static/css/highlight.css" />
     <link rel="stylesheet" href="../../static/css/style.css" />
     <link rel="stylesheet" href="../../static/css/components/sticky.almost-flat.min.css" />
     <link rel="stylesheet" href="../../static/css/components/accordion.css" />
     <link rel="stylesheet" href="../../static/css/components/pygments.css" />
+    <link rel="stylesheet" href="../../static/css/genialwang.css" />
     
 </head>
 <body>
-    <div class="uk-margin-bottom" data-uk-sticky id="sticky">
+    <div class="uk-margin-bottom" data-uk-sticky>
         <nav class="uk-navbar uk-navbar-attached uk-margin-bottom">
             <div class="uk-container uk-container-center">
                 <a href="../../aboutme.html" class="uk-navbar-brand">GenialWang</a>
@@ -33,7 +33,7 @@
     <div class="uk-container uk-container-center">
         <div class="uk-grid">
             <div class="uk-width-medium-3-10">
-                <div data-uk-sticky="{top:50}">
+                <div data-uk-sticky="{top:60}">
                     <ul id="accordion" class="accordion">
 		                <li>
                             <div class="link"><i class="fa fa-paint-brush"></i>导航1<i class="fa fa-chevron-down"></i></div>
@@ -49,25 +49,12 @@
                         </li>
                     </ul>
                 </div>
-                <!--
-                <div class="uk-panel uk-panel-box" data-uk-sticky="{top:100}">
-                    <ul class = "uk-dotnav uk-flex-column" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}" >
-                        <li class = "uk-active"><a href="#1">导航1</a></li>
-                        <li><a href="#2">导航2</a></li>
-                    </ul>
-                </div>
-                -->
             </div>
         
             <div class="uk-width-medium-7-10 uk-container-center">
-                <hr>
+                    <hr>
 <h1 id="toc-0">MEHI</h1>
-<p><a class="btn btn-info" href="http://hahack.com" target="_blank" rel="external">hahack</a>
-Mouse Embryo Heart Imagery</p>
-<p>╯　　　 　╰<br>
-  ●　　　 　 ●<br>
-  " 　 　^　　"</p>
-<p><a href="https://travis-ci.org/septicmk/MEHI"><img src="https://travis-ci.org/septicmk/MEHI.svg" alt="Build Status"></a></p>
+<p><a href="http://hahack.com" target="_blank"><button class="uk-button uk-button-primary" type="button">点我</button></a></p>
 <h2 id="toc-1">About</h2>
 <p>MEHI is a python library for processing large-scale 3D spatial and temporal mouse embryo date. the paralleled version is built on Spark.</p>
 <p>MEHI includes the basic module for image processing, like preprocessing, registration, 2-side fusion, segmentation, tracking. the project contains two implementation, a paralleled version and a serial version. the paralleled version is written against Spark's Python API(Pyspark), making use of scipy, numpy, PuLP and pandas</p>
@@ -148,7 +135,7 @@ Mouse Embryo Heart Imagery</p>
 
     <a href="#" onclick="gotoTop();return false;" class="totop"></a>
 
-    <div class="uk-margin-large-top" style="background:#4b4a5e">
+    <div class="uk-margin-large-top" style="background: #333;">
         <div class="uk-container uk-container-center uk-text-center">
             <div class="uk-panel uk-margin-top uk-margin-bottom">
                 <p>
