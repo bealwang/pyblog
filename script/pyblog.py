@@ -14,10 +14,13 @@ from pygments.formatters import HtmlFormatter
 from jinja2 import Environment, FileSystemLoader
 from plugin import highlight, toc, meta
 
+class TocRenderer(highlight.HighlightMixin, toc.TocMixin ,mistune.Renderer):
+    pass
+
 def init_jinja2(**kw):
     logging.info('init jinja2...')
     options = dict(
-            autoescape = kw.get('autoescape', True),
+            autoescape = kw.get('autoescape', False),
             block_start_string = kw.get('block_start_string', '{%'),
             block_end_string = kw.get('block_end_string', '%}'),
             variable_start_string = kw.get('variable_start_string', '{{'),
@@ -46,12 +49,12 @@ def get_file(path='../www/html/'):
 
 def render_template(template_name, args):
     env = init_jinja2()
-    html = env.get_template(template_name+'.html').render(**args)
+    html = env.get_template(template_name+'.html').render(**args).encode('utf-8')
     try:
         if 'index' == template_name or 'aboutme' == template_name:
             _pwd = '../www/'+template_name+'.html'
         else:
-            _pwd = '../www/html/blog/'+template_name+'.html'
+            _pwd = os.path.join('../www/html', args['categories'], args['basename'])
         _dir = os.path.dirname(_pwd)
         if not os.path.exists(_dir):
             os.makedirs(_dir)
@@ -60,9 +63,42 @@ def render_template(template_name, args):
     except:
         logging.error('html dir not found')
 
+def generate_meta(args):
+    p = u'<meta name = "description" content="' + args['title']  + '">'
+    p += u'<meta name = "Keywords" content="' + args['tags'] + '">'
+    return p
+
+def md2html(md_pwd, mdp):
+    dirname, filename = os.path.split(md_pwd)
+    basename = os.path.splitext(filename)[0]+".html"
+    categories = dirname.split("/")[-1]
+    try:
+        md = open(md_pwd,'r').read()
+        utils = open('../www/templates/utils.html', 'r').read()
+    except:
+        logging.error('invalid md_pwd')
+        return
+    mdp.renderer.reset_toc()
+    args, md = meta.parse(md)
+    md = Environment().from_string(utils+md).render()
+    content = mdp(md)
+    args['categories'] = categories
+    args['basename'] = basename
+    args['content'] = content
+    args['meta'] = generate_meta(args)
+    render_template('blog', args)
+    args['foo'] = get_file()
+    render_template('index', args)
+    render_template('aboutme', args)
 
 if __name__ == '__main__':
-    args = dict(foo = get_file())
-    render_template('blog', args)
-    render_template('aboutme', args)
-    render_template('index', args)
+    renderer = TocRenderer(linenos=True, inlinestyles=False)
+    #renderer.reset_toc()
+    mdp = mistune.Markdown(escape=True, renderer=renderer)
+    #if len(sys.argv) == 1:
+    #    md2html_all(mdp, 'post', '')
+    #elif sys.argv[1] == 'test':
+    #    md2html_all(mdp, 'post', '/home/septicmk/blog/html_test')
+    #elif sys.argv[1] == 'sitemap':
+    #    sitemap_update()
+    md2html('../blogs/test/txt.md', mdp)
