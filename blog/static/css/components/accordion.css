@@ -1,10 +1,10 @@
-* {
+/** {
 	margin: 0;
 	padding: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-}
+}*/
 
 body {
 	font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
@@ -22,13 +22,13 @@ a {
 /** =======================
  * Contenedor Principal
  ===========================*/
-h1 {
+/*h1 {
  	color: #FFF;
  	font-size: 24px;
  	font-weight: 400;
  	text-align: center;
  	margin-top: 80px;
- }
+ }*/
 
 h1 a {
  	color: #c12c42;
@@ -99,12 +99,12 @@ h1 a {
  -----------------------------*/
  .submenu {
  	display: none;
- 	background: #444359;
+ 	background: #333;
  	font-size: 14px;
  }
 
  .submenu li {
- 	border-bottom: 1px solid #4b4a5e;
+ 	border-bottom: 1px solid #49b73f;
  }
 
  .submenu a {
@@ -119,7 +119,7 @@ h1 a {
  }
 
  .submenu a:hover {
- 	background: #39f;
+ 	background: #6d6c6c;
  	color: #FFF
  }
 

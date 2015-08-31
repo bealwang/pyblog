@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset="utf-8" >
+    <meta name = "author" content = "genialwang" >
+    <meta name = "description" content="txt"><meta name = "Keywords" content="Test2">
+    <title>txt</title>
+
+    <link rel="stylesheet" href="../../static/css/uikit.almost-flat.min.css" />
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../static/css/font-awesome-ie7.min.css" />
+    <link rel="stylesheet" href="../../static/css/highlight.css" />
+    <link rel="stylesheet" href="../../static/css/style.css" />
+    <link rel="stylesheet" href="../../static/css/components/sticky.almost-flat.min.css" />
+    <link rel="stylesheet" href="../../static/css/components/accordion.css" />
+    <link rel="stylesheet" href="../../static/css/components/pygments.css" />
+    <link rel="stylesheet" href="../../static/css/genialwang.css" />
+    
+</head>
+<body>
+    <div class="uk-margin-bottom" data-uk-sticky>
+        <nav class="uk-navbar uk-navbar-attached uk-margin-bottom">
+            <div class="uk-container uk-container-center">
+                <a href="../../aboutme.html" class="uk-navbar-brand">GenialWang</a>
+                <ul class="uk-navbar-nav">
+                    <li><a href="../../index.html"><i class="uk-icon-book"></i> 博客</a></li>
+                    <li><a href="../../aboutme.html"><i class="uk-icon-user"></i> 关于我</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="uk-container uk-container-center">
+        <div class="uk-grid">
+            <div class="uk-width-medium-1-5" id="my_navigation">
+                <div data-uk-sticky="{top:60}">
+                    <ul id="accordion" class="accordion">
+		                <li>
+                            <div class="link"><i class="uk-icon-tree"></i>导航1<i class="fa fa-chevron-down"></i></div>
+			                <ul class="submenu">
+                                <li><a href="#1" data-uk-smooth-scroll>子导航1</a></li>
+			                </ul>
+		                </li>
+                        <li>
+                            <div class="link"><i class="uk-icon-tree"></i>导航2<i class="fa fa-chevron-down"></i></div>
+			                <ul class="submenu">
+                                <li><a href="#2" data-uk-smooth-scroll>子导航2</a></li>
+			                </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="uk-width-medium-4-5 uk-container-center" id="my_blog">
+                <div class="uk-panel uk-panel-box" id="my_title">
+                    <h1>txt</h1>
+                </div>
+                <div class="uk-panel uk-panel-box" id="my_content">
+                    <hr>
+<p>asdffasdf</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" onclick="gotoTop();return false;" class="totop"></a>
+
+    <div class="uk-container uk-container-center">
+        <!-- UY BEGIN -->
+        <div id="uyan_frame"></div>
+        <!-- UY END -->
+    </div>
+
+    <div class="uk-margin-large-top" style="background: #333;">
+        <div class="uk-container uk-container-center uk-text-center">
+            <div class="uk-panel uk-margin-top uk-margin-bottom">
+                <p>
+                    <a target="_blank" href="http://weibo.com/u/2935065297" class="uk-icon-button uk-icon-weibo"></a>
+                    <a target="_blank" href="https://github.com/genialwang" class="uk-icon-button uk-icon-github"></a>
+                </p>
+                <p id = "info">Powered by <a href="../../aboutme.html">GenialWang</a>. Copyright &copy; 2015.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../static/js/jquery.min.js"></script>
+    <script src="../../static/js/uikit.min.js"></script>
+    <script src="../../static/js/components/core.js"></script>
+    <script src="../../static/js/components/sticky.min.js"></script>
+    <script src="../../static/js/components/smooth-scroll.min.js"></script>
+    <script src="../../static/js/components/scrollspy.js"></script>
+    <script src="../../static/js/genialwang.js"></script>
+    <script src="../../static/js/components/accordion.js"></script>
+    <script src="../../static/js/components/google_analytics.js"></script>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2057486"></script>
+<script>
+	$('.tile').on('scrollSpy:enter', function() {
+		console.log('enter:', $(this).attr('id'));
+	});
+
+	$('.tile').on('scrollSpy:exit', function() {
+		console.log('exit:', $(this).attr('id'));
+	});
+
+	$('.tile').scrollSpy();
+</script>
+    <!--<script>
+    $('[data-uk-scrollspy]').on('inview.uk.scrollspy', function(){
+        // custom code...
+        console.log($(this).attr("id"));
+        $(".title").css("background-color","yellow");
+    });
+    </script>-->
+
+</body>
+</html>

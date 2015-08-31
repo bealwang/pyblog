@@ -2,32 +2,71 @@
 	color:#FFF;
 	font-size:15;
 }
-
 #info a{
     color:#39f;
     font-size:15
 }
-
 #info a:hover{
     color:#b63b4d;
 }
-
 #main_link{
     right:50px;
     bottom:10px
 }
-
 .totop{
     position:fixed;
-    right:25px;
-    bottom:25px;
+    right:40px;
+    bottom:40px;
     display:block;
     width:26px;
     height:62px;
     background:url(../img/rocket.png) no-repeat 0 0;
     -webkit-transition: all 0.2s ease-in-out;
 }
-
 .totop:hover{
     background:url(../img/rocket.png) no-repeat 0 -62px;
+}
+#friend_link{
+    margin-top:30px;
+    background-color: #FFF;
+}
+#my_title{
+    background-color: #333;
+    text-align:center;
+}
+#my_title h1{
+    color: #6ab825;
+}
+#my_content{
+    margin-top: 0px;
+}
+
+#my_navigation{
+    padding-left: 0px;
+}
+
+#my_navigation ul {
+    margin:0px auto 0px;
+}
+
+#my_navigation .link i.fa-chevron-down{
+    left:auto;
+    right:10px;
+    font-size:14px;
+}
+#my_navigation i {
+    top:10px;
+    left:5px;
+    font-size:14px;
+}
+#my_navigation .link{
+    padding:10px 10px 10px 30px;
+}
+#my_navigation .submenu a{
+    padding:7px;
+    padding-left:30px;
+    font-size:14px;
+}
+#my_blog{
+    padding-left:10px;
 }
