@@ -1,17 +1,10 @@
 title:txt
 tags:nihao
 ---
-
-# MEHI
-{{ btn('点我', 'http://hahack.com', 'primary') }}
 ## About
-
 MEHI is a python library for processing large-scale 3D spatial and temporal mouse embryo date. the paralleled version is built on Spark.
-
 MEHI includes the basic module for image processing, like preprocessing, registration, 2-side fusion, segmentation, tracking. the project contains two implementation, a paralleled version and a serial version. the paralleled version is written against Spark's Python API(Pyspark), making use of scipy, numpy, PuLP and pandas
-
 ## Requirements
-
  - Python 2.7
  - numpy 1.9+
  - pandas 0.16.1+
@@ -21,7 +14,6 @@ MEHI includes the basic module for image processing, like preprocessing, registr
  - scipy 0.15+
  - pyspark 1.3.0
  - Cython 0.21+ 
-
 ## Quick Start
 
 The paralleled version is designed to run on a cluster, but currently, I just test it on local mode. Anyway, you can get it work by following steps.  

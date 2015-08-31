@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset="utf-8" >
     <meta name = "author" content = "genialwang" >
     <meta name = "description" content="txt"><meta name = "Keywords" content="nihao">
-    <title>博客</title>
+    <title>txt</title>
 
     <link rel="stylesheet" href="../../static/css/uikit.almost-flat.min.css" />
     <link rel="stylesheet" href="../../static/css/font-awesome.min.css" />
@@ -32,17 +32,17 @@
 
     <div class="uk-container uk-container-center">
         <div class="uk-grid">
-            <div class="uk-width-medium-3-10">
+            <div class="uk-width-medium-1-5" id="my_navigation">
                 <div data-uk-sticky="{top:60}">
                     <ul id="accordion" class="accordion">
 		                <li>
-                            <div class="link"><i class="fa fa-paint-brush"></i>导航1<i class="fa fa-chevron-down"></i></div>
+                            <div class="link"><i class="uk-icon-tree"></i>导航1<i class="fa fa-chevron-down"></i></div>
 			                <ul class="submenu">
                                 <li><a href="#1" data-uk-smooth-scroll>子导航1</a></li>
 			                </ul>
 		                </li>
                         <li>
-                            <div class="link"><i class="fa fa-paint-brush"></i>导航2<i class="fa fa-chevron-down"></i></div>
+                            <div class="link"><i class="uk-icon-tree"></i>导航2<i class="fa fa-chevron-down"></i></div>
 			                <ul class="submenu">
                                 <li><a href="#2" data-uk-smooth-scroll>子导航2</a></li>
 			                </ul>
@@ -51,14 +51,16 @@
                 </div>
             </div>
         
-            <div class="uk-width-medium-7-10 uk-container-center">
+            <div class="uk-width-medium-4-5 uk-container-center" id="my_blog">
+                <div class="uk-panel uk-panel-box" id="my_title">
+                    <h1>txt</h1>
+                </div>
+                <div class="uk-panel uk-panel-box" id="my_content">
                     <hr>
-<h1 id="toc-0">MEHI</h1>
-<p><a href="http://hahack.com" target="_blank"><button class="uk-button uk-button-primary" type="button">点我</button></a></p>
-<h2 id="toc-1">About</h2>
-<p>MEHI is a python library for processing large-scale 3D spatial and temporal mouse embryo date. the paralleled version is built on Spark.</p>
-<p>MEHI includes the basic module for image processing, like preprocessing, registration, 2-side fusion, segmentation, tracking. the project contains two implementation, a paralleled version and a serial version. the paralleled version is written against Spark's Python API(Pyspark), making use of scipy, numpy, PuLP and pandas</p>
-<h2 id="toc-2">Requirements</h2>
+<h2 id="toc-0">About</h2>
+<p>MEHI is a python library for processing large-scale 3D spatial and temporal mouse embryo date. the paralleled version is built on Spark.
+MEHI includes the basic module for image processing, like preprocessing, registration, 2-side fusion, segmentation, tracking. the project contains two implementation, a paralleled version and a serial version. the paralleled version is written against Spark's Python API(Pyspark), making use of scipy, numpy, PuLP and pandas</p>
+<h2 id="toc-1">Requirements</h2>
 <ul>
 <li>Python 2.7</li>
 <li>numpy 1.9+</li>
@@ -68,9 +70,9 @@
 <li>scikit-image 0.11+</li>
 <li>scipy 0.15+</li>
 <li>pyspark 1.3.0</li>
-<li>Cython 0.21+ </li>
+<li>Cython 0.21+ 
+## Quick Start</li>
 </ul>
-<h2 id="toc-3">Quick Start</h2>
 <p>The paralleled version is designed to run on a cluster, but currently, I just test it on local mode. Anyway, you can get it work by following steps.<br>
 1) change the Input dir in the MEHI_global.py or in the MEHI_s_global.py</p>
 <div class="source"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -98,14 +100,14 @@
 <div class="source"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>python MEHI_s_main.py
 </pre></div>
 </td></tr></table></div>
-<h2 id="toc-4">More Information</h2>
-<h3 id="toc-5">MEHI is broadly organized into:</h3>
+<h2 id="toc-2">More Information</h2>
+<h3 id="toc-3">MEHI is broadly organized into:</h3>
 <ul>
 <li>A main class with methods for initialization of Spark and control of the whole workflow.</li>
 <li>Classes for image processing module,like MEHI_s_fusion.</li>
 <li>Helper components like MEHI_s_IO, MEHI_s_common</li>
 </ul>
-<h3 id="toc-6">core API:</h3>
+<h3 id="toc-4">core API:</h3>
 <p><strong>Preprocessing</strong>:</p>
 <ul>
 <li>stripe_removal(): 去横纹</li>
@@ -126,14 +128,21 @@
 <li>Clustering(): 将2D分割按距离层次聚类</li>
 <li>Check(): 可视化分割结果  </li>
 </ul>
-<h2 id="toc-7">License</h2>
+<h2 id="toc-5">License</h2>
 <p>BSD</p>
 
+                </div>
             </div>
         </div>
     </div>
 
     <a href="#" onclick="gotoTop();return false;" class="totop"></a>
+
+    <div class="uk-container uk-container-center">
+        <!-- UY BEGIN -->
+        <div id="uyan_frame"></div>
+        <!-- UY END -->
+    </div>
 
     <div class="uk-margin-large-top" style="background: #333;">
         <div class="uk-container uk-container-center uk-text-center">
@@ -141,8 +150,6 @@
                 <p>
                     <a target="_blank" href="http://weibo.com/u/2935065297" class="uk-icon-button uk-icon-weibo"></a>
                     <a target="_blank" href="https://github.com/genialwang" class="uk-icon-button uk-icon-github"></a>
-                    <a target="_blank" href="" class="uk-icon-button uk-icon-linkedin-square"></a>
-                    <a target="_blank" href="" class="uk-icon-button uk-icon-twitter"></a>
                 </p>
                 <p id = "info">Powered by <a href="../../aboutme.html">GenialWang</a>. Copyright &copy; 2015.</p>
             </div>
@@ -158,6 +165,7 @@
     <script src="../../static/js/genialwang.js"></script>
     <script src="../../static/js/components/accordion.js"></script>
     <script src="../../static/js/components/google_analytics.js"></script>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2057486"></script>
 <script>
 	$('.tile').on('scrollSpy:enter', function() {
 		console.log('enter:', $(this).attr('id'));
