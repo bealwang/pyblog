@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../static/css/highlight.css" />
     <link rel="stylesheet" href="../../static/css/style.css" />
     <link rel="stylesheet" href="../../static/css/components/sticky.almost-flat.min.css" />
+    <link rel="stylesheet" href="../../static/css/components/dotnav.almost-flat.min.css" />
     <link rel="stylesheet" href="../../static/css/components/accordion.css" />
     <link rel="stylesheet" href="../../static/css/components/pygments.css" />
     <link rel="stylesheet" href="../../static/css/genialwang.css" />
@@ -34,6 +35,7 @@
         <div class="uk-grid">
             <div class="uk-width-medium-1-5" id="my_navigation">
                 <div data-uk-sticky="{top:60, boundary:true}">
+                    <!--
                     <ul id="accordion" class="accordion">
 		                <li>
                             <div class="link"><i class="uk-icon-tree"></i>导航1<i class="fa fa-chevron-down"></i></div>
@@ -47,6 +49,14 @@
                                 <li><a href="#2" data-uk-smooth-scroll>子导航2</a></li>
 			                </ul>
                         </li>
+                    </ul>
+                    -->
+
+                    <ul class="uk-dotnav uk-flex-column" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}">
+                        <li class="uk-active"><a href="#toc-0">导航1</a>
+                        <li><a href="#toc-1">导航2</a>
+                        <li><a href="#toc-2">导航3</a>
+                        <li><a href="#toc-3">导航4</a>
                     </ul>
                 </div>
             </div>
@@ -86,25 +96,13 @@
 
     <script src="../../static/js/jquery.min.js"></script>
     <script src="../../static/js/uikit.min.js"></script>
-    <script src="../../static/js/components/core.js"></script>
     <script src="../../static/js/components/sticky.min.js"></script>
+    <script src="../../static/js/components/scrollspy.min.js"></script>
     <script src="../../static/js/components/smooth-scroll.min.js"></script>
-    <script src="../../static/js/components/scrollspy.js"></script>
     <script src="../../static/js/genialwang.js"></script>
     <script src="../../static/js/components/accordion.js"></script>
     <script src="../../static/js/components/google_analytics.js"></script>
     <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2057486"></script>
-<script>
-	$('.tile').on('scrollSpy:enter', function() {
-		console.log('enter:', $(this).attr('id'));
-	});
-
-	$('.tile').on('scrollSpy:exit', function() {
-		console.log('exit:', $(this).attr('id'));
-	});
-
-	$('.tile').scrollSpy();
-</script>
     <!--<script>
     $('[data-uk-scrollspy]').on('inview.uk.scrollspy', function(){
         // custom code...

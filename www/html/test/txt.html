@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../static/css/highlight.css" />
     <link rel="stylesheet" href="../../static/css/style.css" />
     <link rel="stylesheet" href="../../static/css/components/sticky.almost-flat.min.css" />
+    <link rel="stylesheet" href="../../static/css/components/dotnav.almost-flat.min.css" />
     <link rel="stylesheet" href="../../static/css/components/accordion.css" />
     <link rel="stylesheet" href="../../static/css/components/pygments.css" />
     <link rel="stylesheet" href="../../static/css/genialwang.css" />
@@ -34,6 +35,7 @@
         <div class="uk-grid">
             <div class="uk-width-medium-1-5" id="my_navigation">
                 <div data-uk-sticky="{top:60, boundary:true}">
+                    <!--
                     <ul id="accordion" class="accordion">
 		                <li>
                             <div class="link"><i class="uk-icon-tree"></i>导航1<i class="fa fa-chevron-down"></i></div>
@@ -47,6 +49,14 @@
                                 <li><a href="#2" data-uk-smooth-scroll>子导航2</a></li>
 			                </ul>
                         </li>
+                    </ul>
+                    -->
+
+                    <ul class="uk-dotnav uk-flex-column" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}">
+                        <li class="uk-active"><a href="#toc-0">导航1</a>
+                        <li><a href="#toc-1">导航2</a>
+                        <li><a href="#toc-2">导航3</a>
+                        <li><a href="#toc-3">导航4</a>
                     </ul>
                 </div>
             </div>
@@ -73,7 +83,31 @@ MEHI includes the basic module for image processing, like preprocessing, registr
 <li>Cython 0.21+ 
 ## Quick Start</li>
 </ul>
-<p>The paralleled version is designed to run on a cluster, but currently, I just test it on local mode. Anyway, you can get it work by following steps.<br>
+<div class="uk-alert uk-alert-warning">
+
+    <i class="uk-icon-warning"></i>
+
+    这样子是不行的
+</div>
+<div class="uk-alert uk-alert-danger">
+
+    <i class="uk-icon-bug"></i>
+
+    这样子是不行的
+</div>
+<div class="uk-alert uk-alert-success">
+
+    <i class="uk-icon-check-square"></i>
+
+    这样子是不行的
+</div>
+<div class="uk-alert uk-alert-info">
+
+    <i class="uk-icon-info"></i>
+
+    这样子是不行的
+</div><p><a href="www.baidu.com" target="_blank"><button class="uk-button uk-button-success" type="button">点我</button></a>
+The paralleled version is designed to run on a cluster, but currently, I just test it on local mode. Anyway, you can get it work by following steps.<br>
 1) change the Input dir in the MEHI_global.py or in the MEHI_s_global.py</p>
 <div class="source"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -158,25 +192,13 @@ MEHI includes the basic module for image processing, like preprocessing, registr
 
     <script src="../../static/js/jquery.min.js"></script>
     <script src="../../static/js/uikit.min.js"></script>
-    <script src="../../static/js/components/core.js"></script>
     <script src="../../static/js/components/sticky.min.js"></script>
+    <script src="../../static/js/components/scrollspy.min.js"></script>
     <script src="../../static/js/components/smooth-scroll.min.js"></script>
-    <script src="../../static/js/components/scrollspy.js"></script>
     <script src="../../static/js/genialwang.js"></script>
     <script src="../../static/js/components/accordion.js"></script>
     <script src="../../static/js/components/google_analytics.js"></script>
     <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2057486"></script>
-<script>
-	$('.tile').on('scrollSpy:enter', function() {
-		console.log('enter:', $(this).attr('id'));
-	});
-
-	$('.tile').on('scrollSpy:exit', function() {
-		console.log('exit:', $(this).attr('id'));
-	});
-
-	$('.tile').scrollSpy();
-</script>
     <!--<script>
     $('[data-uk-scrollspy]').on('inview.uk.scrollspy', function(){
         // custom code...

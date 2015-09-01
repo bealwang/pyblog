@@ -16,6 +16,12 @@ MEHI includes the basic module for image processing, like preprocessing, registr
  - Cython 0.21+ 
 ## Quick Start
 
+{{ alert("这样子是不行的", "warning") }}
+{{ alert("这样子是不行的", "danger") }}
+{{ alert("这样子是不行的", "success") }}
+{{ alert("这样子是不行的", "info") }}
+
+{{ btn("点我", "www.baidu.com", "success") }}
 The paralleled version is designed to run on a cluster, but currently, I just test it on local mode. Anyway, you can get it work by following steps.  
 1) change the Input dir in the MEHI\_global.py or in the MEHI\_s\_global.py
 ```python

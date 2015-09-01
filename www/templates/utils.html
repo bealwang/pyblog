@@ -1,25 +1,18 @@
-{% macro btn(value, link, type='info') -%}
+{% macro btn(value, link, type='primary') -%}
 <a href="{{link}}" target="_blank"><button class="uk-button uk-button-{{type}}" type="button">{{value}}</button></a>
 {%- endmacro %}
 
-{% macro label(value, type='info') -%}
-<span class="label label-{{type}}">{{value}}</span>
-{%- endmacro %}
-
-{% macro badge(number) -%}
-<span class="badge">{{number}}</span>
-{%- endmacro %}
 
 {% macro alert(value, type='danger') -%}
-<div class="alert alert-{{type}}">
+<div class="uk-alert uk-alert-{{type}}">
     {% if type == 'warning' %}
-    <i class="fa fa-bell"></i>
+    <i class="uk-icon-warning"></i>
     {% elif type == 'danger' %}
-    <i class="fa fa-bug"></i>
+    <i class="uk-icon-bug"></i>
     {% elif type == 'success' %}
-    <i class="fa fa-lightbulb-o"></i>
+    <i class="uk-icon-check-square"></i>
     {% else %}
-    <i class="fa fa-info"></i>
+    <i class="uk-icon-info"></i>
     {% endif %}
     {{value}}
 </div>
