@@ -30,4 +30,7 @@ function gotoTop(acceleration,stime) {
    }
 }
 
+$(window).scroll(function(event){
+    $(".totop").show();
+});
 

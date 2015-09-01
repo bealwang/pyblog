@@ -251,7 +251,7 @@ h2{
   margin: 0.83em 0;
   color: #6ab825;
   border-bottom: 2px #ccc solid;
-  padding-top: 40px;
+  padding-top: 10px;
   margin-top: -45px;
 }
 
@@ -293,7 +293,7 @@ h6,section h5,section section h4,section section section h3{font-size:.8em}
 }
 
 h2,h3{
-  margin: 0.5em 0px;
+  margin: 20px 0px;
 }
 .page-header .brand{
   color: #bbbbbb;
