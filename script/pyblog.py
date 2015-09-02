@@ -4,7 +4,7 @@
 __author__ = 'Genial Wang'
 
 import logging; logging.basicConfig(level=logging.INFO)
-import sys, os
+import sys, os,re
 import mistune
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
@@ -31,6 +31,11 @@ def init_jinja2(**kw):
         path = ('../www/templates')
     env = Environment(loader=FileSystemLoader(path), **options)
     return env
+
+def findtoc(html):
+    r1 = re.compile(r'<h2.*?>(.*?)<\/h2>')
+    m = re.findall(r1, html)
+    return m
 
 def get_file(path='../www/html/'):
     list_files = os.listdir(path)
@@ -81,10 +86,12 @@ def parse_md(md_pwd, mdp):
     args, md = meta.parse(md)
     md = Environment().from_string(utils+md).render()
     content = mdp(md)
+    item_toc = findtoc(content)
     args['categories'] = categories
     args['basename'] = basename
     args['content'] = content
     args['meta'] = generate_meta(args)
+    args['item_toc'] = item_toc
     render_template('blog', args)
 
 def parse_md_all(mdp, md_dir="../blogs"):

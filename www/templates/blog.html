@@ -53,11 +53,13 @@
                     -->
 
                     <ul class="uk-dotnav uk-flex-column" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}">
-                        <li class="uk-active"><a href="#toc-0">导航1</a></li>
-                        <li><a href="#toc-1">abc2</a></li>
-                        <li><a href="#toc-2">导航3</a></li>
-                        <li><a href="#toc-3">导航4</a></li>
-                    </ul>
+                        <li class="uk-active"><a href="#toc-0">{{item_toc[0]}}</a></li>
+                        {% set count = 1 %}
+                        {% for item in item_toc[1:] %}
+                        <li><a href="#toc-{{count}}">{{item}}</a></li>
+                        {% set count = count+1 %}
+                        {% endfor %}
+                   </ul>
                 </div>
             </div>
         

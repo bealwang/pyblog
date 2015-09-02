@@ -30,11 +30,17 @@ class TocMixin(object):
         self.toc_count = 0
 
     def header(self, text, level, raw=None):
-        rv = '<h%d id="toc-%d">%s</h%d>\n' % (
-            level, self.toc_count, text, level
-        )
+        if level == 2:
+            rv = '<h%d id="toc-%d">%s</h%d>\n' % (
+                level, self.toc_count, text, level
+            )
+            self.toc_count += 1
+        else:
+            rv = '<h%d>%s</h%d>\n' % (
+                level, text, level
+            )
+
         self.toc_tree.append((self.toc_count, text, level, raw))
-        self.toc_count += 1
         return rv
 
     def render_toc(self, level=3):

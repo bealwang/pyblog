@@ -53,11 +53,19 @@
                     -->
 
                     <ul class="uk-dotnav uk-flex-column" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}">
-                        <li class="uk-active"><a href="#toc-0">导航1</a></li>
-                        <li><a href="#toc-1">abc2</a></li>
-                        <li><a href="#toc-2">导航3</a></li>
-                        <li><a href="#toc-3">导航4</a></li>
-                    </ul>
+                        <li class="uk-active"><a href="#toc-0">About</a></li>
+                        
+                        
+                        <li><a href="#toc-1">要求</a></li>
+                        
+                        
+                        <li><a href="#toc-2">More Information</a></li>
+                        
+                        
+                        <li><a href="#toc-3">License</a></li>
+                        
+                        
+                   </ul>
                 </div>
             </div>
         
@@ -70,7 +78,7 @@
 <h2 id="toc-0">About</h2>
 <p>MEHI is a python library for processing large-scale 3D spatial and temporal mouse embryo date. the paralleled version is built on Spark.
 MEHI includes the basic module for image processing, like preprocessing, registration, 2-side fusion, segmentation, tracking. the project contains two implementation, a paralleled version and a serial version. the paralleled version is written against Spark's Python API(Pyspark), making use of scipy, numpy, PuLP and pandas</p>
-<h2 id="toc-1">Requirements</h2>
+<h2 id="toc-1">要求</h2>
 <ul>
 <li>Python 2.7</li>
 <li>numpy 1.9+</li>
@@ -135,13 +143,13 @@ The paralleled version is designed to run on a cluster, but currently, I just te
 </pre></div>
 </td></tr></table></div>
 <h2 id="toc-2">More Information</h2>
-<h3 id="toc-3">MEHI is broadly organized into:</h3>
+<h3>MEHI is broadly organized into:</h3>
 <ul>
 <li>A main class with methods for initialization of Spark and control of the whole workflow.</li>
 <li>Classes for image processing module,like MEHI_s_fusion.</li>
 <li>Helper components like MEHI_s_IO, MEHI_s_common</li>
 </ul>
-<h3 id="toc-4">core API:</h3>
+<h3>core API:</h3>
 <p><strong>Preprocessing</strong>:</p>
 <ul>
 <li>stripe_removal(): 去横纹</li>
@@ -162,7 +170,7 @@ The paralleled version is designed to run on a cluster, but currently, I just te
 <li>Clustering(): 将2D分割按距离层次聚类</li>
 <li>Check(): 可视化分割结果  </li>
 </ul>
-<h2 id="toc-5">License</h2>
+<h2 id="toc-3">License</h2>
 <p>BSD</p>
 
                 </div>
