@@ -42,32 +42,20 @@
     margin-top: 0px;
 }
 
-#my_navigation{
-    padding-left: 0px;
-}
-
-#my_navigation ul {
-    margin:0px auto 0px;
-}
-
-#my_navigation .link i.fa-chevron-down{
-    left:auto;
-    right:10px;
-    font-size:14px;
-}
-#my_navigation i {
-    top:10px;
-    left:5px;
-    font-size:14px;
-}
-#my_navigation .link{
-    padding:10px 10px 10px 30px;
-}
-#my_navigation .submenu a{
-    padding:7px;
-    padding-left:30px;
-    font-size:14px;
-}
 #my_blog{
     padding-left:10px;
 }
+.uk-dotnav li a:link{
+    text-decoration:none;
+}
+.uk-dotnav li a:visited{
+    color:#636363;
+    text-decoration: none;
+}
+.uk-dotnav li a:hover {
+    background-color:#636363;
+    transform:scale(1.3);
+    text-decoration: none;
+    color: #636363;
+}
+
