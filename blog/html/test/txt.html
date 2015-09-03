@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="../../static/css/uikit.almost-flat.min.css" />
     <link rel="stylesheet" href="../../static/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../../static/css/font-awesome-ie7.min.css" />
+    <link rel="stylesheet" href="../../static/css/components/slidenav.almost-flat.min.css" />
     <link rel="stylesheet" href="../../static/css/highlight.css" />
     <link rel="stylesheet" href="../../static/css/style.css" />
     <link rel="stylesheet" href="../../static/css/components/sticky.almost-flat.min.css" />
     <link rel="stylesheet" href="../../static/css/components/dotnav.almost-flat.min.css" />
-    <link rel="stylesheet" href="../../static/css/components/accordion.css" />
     <link rel="stylesheet" href="../../static/css/components/pygments.css" />
     <link rel="stylesheet" href="../../static/css/genialwang.css" />
     
@@ -35,29 +35,20 @@
         <div class="uk-grid">
             <div class="uk-width-medium-1-5" id="my_navigation">
                 <div data-uk-sticky="{top:60, boundary:true}">
-                    <!--
-                    <ul id="accordion" class="accordion">
-		                <li>
-                            <div class="link"><i class="uk-icon-tree"></i>导航1<i class="fa fa-chevron-down"></i></div>
-			                <ul class="submenu">
-                                <li><a href="#1" data-uk-smooth-scroll>子导航1</a></li>
-			                </ul>
-		                </li>
-                        <li>
-                            <div class="link"><i class="uk-icon-tree"></i>导航2<i class="fa fa-chevron-down"></i></div>
-			                <ul class="submenu">
-                                <li><a href="#2" data-uk-smooth-scroll>子导航2</a></li>
-			                </ul>
-                        </li>
-                    </ul>
-                    -->
-
                     <ul class="uk-dotnav uk-flex-column" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}">
-                        <li class="uk-active"><a href="#toc-0">导航1</a>
-                        <li><a href="#toc-1">导航2</a>
-                        <li><a href="#toc-2">导航3</a>
-                        <li><a href="#toc-3">导航4</a>
-                    </ul>
+                        <li class="uk-active"><a href="#toc-0">About</a></li>
+                        
+                        
+                        <li><a href="#toc-1">要求</a></li>
+                        
+                        
+                        <li><a href="#toc-2">More Information</a></li>
+                        
+                        
+                        <li><a href="#toc-3">License</a></li>
+                        
+                        
+                   </ul>
                 </div>
             </div>
         
@@ -70,7 +61,7 @@
 <h2 id="toc-0">About</h2>
 <p>MEHI is a python library for processing large-scale 3D spatial and temporal mouse embryo date. the paralleled version is built on Spark.
 MEHI includes the basic module for image processing, like preprocessing, registration, 2-side fusion, segmentation, tracking. the project contains two implementation, a paralleled version and a serial version. the paralleled version is written against Spark's Python API(Pyspark), making use of scipy, numpy, PuLP and pandas</p>
-<h2 id="toc-1">Requirements</h2>
+<h2 id="toc-1">要求</h2>
 <ul>
 <li>Python 2.7</li>
 <li>numpy 1.9+</li>
@@ -106,8 +97,11 @@ MEHI includes the basic module for image processing, like preprocessing, registr
     <i class="uk-icon-info"></i>
 
     这样子是不行的
-</div><p><a href="www.baidu.com" target="_blank"><button class="uk-button uk-button-success" type="button">点我</button></a>
-The paralleled version is designed to run on a cluster, but currently, I just test it on local mode. Anyway, you can get it work by following steps.<br>
+</div><p><a href="www.baidu.com" target="_blank"><button class="uk-button uk-button-success" type="button">点我</button></a></p>
+<p><a href="./images/选区_001.png" data-uk-lightbox="{group:'group1'}" title="图片一">
+    <img src="./images/选区_001.png" alt="图片一" />
+</a></p>
+<p>The paralleled version is designed to run on a cluster, but currently, I just test it on local mode. Anyway, you can get it work by following steps.<br>
 1) change the Input dir in the MEHI_global.py or in the MEHI_s_global.py</p>
 <div class="source"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -116,6 +110,9 @@ The paralleled version is designed to run on a cluster, but currently, I just te
 <span class="n">right_pwd</span> <span class="o">=</span> <span class="s">&#39;your image dir&#39;</span>
 </pre></div>
 </td></tr></table></div>
+<p><a href="./images/选区_002.png" data-uk-lightbox="{group:'group1'}" title="图片一">
+    <img src="./images/选区_002.png" alt="图片二" />
+</a></p>
 <p>2) modify the MEHI_main.py or the MEHI_s_main.py to customize your workflow</p>
 <div class="source"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -134,14 +131,23 @@ The paralleled version is designed to run on a cluster, but currently, I just te
 <div class="source"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre>python MEHI_s_main.py
 </pre></div>
 </td></tr></table></div>
+<p><a href="./images/选区_003.png" data-uk-lightbox="{group:'group2'}" title="图片san">
+    <img src="./images/选区_003.png" alt="图片san" />
+</a></p>
 <h2 id="toc-2">More Information</h2>
-<h3 id="toc-3">MEHI is broadly organized into:</h3>
+<h3>MEHI is broadly organized into:</h3>
 <ul>
 <li>A main class with methods for initialization of Spark and control of the whole workflow.</li>
 <li>Classes for image processing module,like MEHI_s_fusion.</li>
 <li>Helper components like MEHI_s_IO, MEHI_s_common</li>
 </ul>
-<h3 id="toc-4">core API:</h3>
+<p><a href="./images/选区_004.png" data-uk-lightbox="{group:'group3'}" title="图片wu">
+    <img src="./images/选区_004.png" alt="图片si" />
+</a>
+<a href="./images/选区_005.png" data-uk-lightbox="{group:'group3'}" title="图片wu">
+    <img src="./images/选区_005.png" alt="图片wu" />
+</a></p>
+<h3>core API:</h3>
 <p><strong>Preprocessing</strong>:</p>
 <ul>
 <li>stripe_removal(): 去横纹</li>
@@ -162,7 +168,7 @@ The paralleled version is designed to run on a cluster, but currently, I just te
 <li>Clustering(): 将2D分割按距离层次聚类</li>
 <li>Check(): 可视化分割结果  </li>
 </ul>
-<h2 id="toc-5">License</h2>
+<h2 id="toc-3">License</h2>
 <p>BSD</p>
 
                 </div>
@@ -184,6 +190,7 @@ The paralleled version is designed to run on a cluster, but currently, I just te
                 <p>
                     <a target="_blank" href="http://weibo.com/u/2935065297" class="uk-icon-button uk-icon-weibo"></a>
                     <a target="_blank" href="https://github.com/genialwang" class="uk-icon-button uk-icon-github"></a>
+                    <a href="Mailto:wangbiao@ncic.ac.cn" class="uk-icon-button uk-icon-envelope"></a>
                 </p>
                 <p id = "info">Powered by <a href="../../aboutme.html">GenialWang</a>. Copyright &copy; 2015.</p>
             </div>
@@ -196,7 +203,7 @@ The paralleled version is designed to run on a cluster, but currently, I just te
     <script src="../../static/js/components/scrollspy.min.js"></script>
     <script src="../../static/js/components/smooth-scroll.min.js"></script>
     <script src="../../static/js/genialwang.js"></script>
-    <script src="../../static/js/components/accordion.js"></script>
+    <script src="../../static/js/components/lightbox.min.js"></script>
     <script src="../../static/js/components/google_analytics.js"></script>
     <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2057486"></script>
     <!--<script>
