@@ -31,6 +31,9 @@
     margin-top:30px;
     background-color: #FFF;
 }
+#my_navigation{
+    padding-left:0px;
+}
 #my_title{
     background-color: #333;
     text-align:center;
@@ -41,11 +44,17 @@
 #my_content{
     margin-top: 0px;
 }
-
-#my_blog{
-    padding-left:10px;
+ol, ul {
+    padding-left: 15px;
 }
-.uk-dotnav li a:link{
+#my_blog{
+    padding-left:0px;
+}
+.uk-dotnav>.uk-active a{
+    color: #636363;
+}
+.uk-dotnav li a{
+    color:#a3a3a3;
     text-decoration:none;
 }
 .uk-dotnav li a:visited{

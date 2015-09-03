@@ -22,6 +22,9 @@ MEHI includes the basic module for image processing, like preprocessing, registr
 {{ alert("这样子是不行的", "info") }}
 
 {{ btn("点我", "www.baidu.com", "success") }}
+
+{{ img("./images/选区_001.png", "图片一", "图片一", "group1") }}
+
 The paralleled version is designed to run on a cluster, but currently, I just test it on local mode. Anyway, you can get it work by following steps.  
 1) change the Input dir in the MEHI\_global.py or in the MEHI\_s\_global.py
 ```python
@@ -29,6 +32,9 @@ import MEHI
 left_pwd = 'your image dir'
 right_pwd = 'your image dir'
 ```
+
+{{ img("./images/选区_002.png", "图片一", "图片二", "group1") }}
+
 2) modify the MEHI\_main.py or the MEHI\_s\_main.py to customize your workflow
 ```python
 import os
@@ -43,13 +49,17 @@ segmentation(fuse_img)
 python MEHI_s_main.py 
 ```
 
-## More Information
+{{ img("./images/选区_003.png", "图片san", "图片san", "group2") }}
 
+## More Information
 ### MEHI is broadly organized into:
 
 - A main class with methods for initialization of Spark and control of the whole workflow.
 - Classes for image processing module,like MEHI\_s\_fusion.
 - Helper components like MEHI\_s\_IO, MEHI\_s\_common
+
+{{ img("./images/选区_004.png", "图片wu", "图片si", "group3") }}
+{{ img("./images/选区_005.png", "图片wu", "图片wu", "group3") }}
 
 ### core API:
 

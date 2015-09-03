@@ -28,7 +28,7 @@ def init_jinja2(**kw):
             )
     path = kw.get('path', None)
     if path is None:
-        path = ('../www/templates')
+        path = ('../templates')
     env = Environment(loader=FileSystemLoader(path), **options)
     return env
 
@@ -78,7 +78,7 @@ def parse_md(md_pwd, mdp):
     categories = dirname.split("/")[-1]
     try:
         md = open(md_pwd,'r').read()
-        utils = open('../www/templates/utils.html', 'r').read()
+        utils = open('../templates/utils.html', 'r').read()
     except:
         logging.error('invalid md_pwd')
         return
@@ -96,7 +96,8 @@ def parse_md(md_pwd, mdp):
 
 def parse_md_all(mdp, md_dir="../blogs"):
     for root, dirs, files in os.walk(md_dir):
-        for md_files in files:
+        filter_files = filter(lambda x:os.path.splitext(x)[1]==".md", files)
+        for md_files in filter_files:
             md_path = os.path.join(root, md_files)
             parse_md(md_path, mdp)
     args = dict()
