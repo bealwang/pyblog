@@ -105,30 +105,6 @@ def parse_md_all(mdp, md_dir="../blogs"):
     render_template('index', args)
     render_template('aboutme', args)
 
-def sitemap_update():
-    pwd = os.getcwd()
-    _pwd = os.path.join(pwd,'html','sitemap.xml')
-    des = open(_pwd, 'w')
-    conf = """<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-"""
-    conf += u"<url><loc>http://blog.septicmk.com/</loc>"
-    conf += u"<lastmod>"+ get_mod_time("html/index.html") +u"</lastmod>"
-    conf += u"<changefreq>weekly</changefreq>"
-    conf += u"<priority>1.00</priority></url>"
-    list_dirs = os.walk('html')
-    for root, dirs, files in list_dirs:
-        for f in files:
-            if f.endswith('.html') and f!="google7b6f6c7b39c2bc4e.html" and f!='baidu_verify_lk0v2QeMl2.html':
-                conf += u"<url><loc>http://blog.septicmk.com/"+ os.path.join(root, f)[5:] + u"</loc>"
-                conf += u"<lastmod>"+ get_mod_time(os.path.join(root,f)) + u"</lastmod>"
-                conf += u"<changefreq>weekly</changefreq>"
-                conf += u"<priority>0.80</priority></url>"
-    conf += u"</urlset>"
-    des.write(conf)
 
 if __name__ == '__main__':
     renderer = TocRenderer(linenos=True, inlinestyles=False)
