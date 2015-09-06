@@ -27,49 +27,16 @@
         <div class="uk-grid">
             <div class="uk-width-medium-3-4">
                 <ul id="accordion" class="accordion">
-                    
+                    {%for f in foo%}
 		            <li>
-                        <div class="link"><i class="fa fa-paint-brush"></i>C语言<i class="fa fa-chevron-down"></i></div>
+                        <div class="link"><i class="fa fa-paint-brush"></i>{{f[0]}}<i class="fa fa-chevron-down"></i></div>
 			            <ul class="submenu">
-                        
-                        <li><a href="./html/C语言/a.html">a</a></li>
-                        
+                        {%for l in f[1:]%}
+                        <li><a href="./html/{{f[0]}}/{{l}}.html">{{l}}</a></li>
+                        {%endfor%}
 			            </ul>
 		            </li>
-                    
-		            <li>
-                        <div class="link"><i class="fa fa-paint-brush"></i>python<i class="fa fa-chevron-down"></i></div>
-			            <ul class="submenu">
-                        
-                        <li><a href="./html/python/基于python的静态博客系统.html">基于python的静态博客系统</a></li>
-                        
-			            </ul>
-		            </li>
-                    
-		            <li>
-                        <div class="link"><i class="fa fa-paint-brush"></i>blog<i class="fa fa-chevron-down"></i></div>
-			            <ul class="submenu">
-                        
-                        <li><a href="./html/blog/blog.html">blog</a></li>
-                        
-                        <li><a href="./html/blog/test.html">test</a></li>
-                        
-			            </ul>
-		            </li>
-                    
-		            <li>
-                        <div class="link"><i class="fa fa-paint-brush"></i>test<i class="fa fa-chevron-down"></i></div>
-			            <ul class="submenu">
-                        
-                        <li><a href="./html/test/txt.html">txt</a></li>
-                        
-                        <li><a href="./html/test/ttt.html">ttt</a></li>
-                        
-                        <li><a href="./html/test/xxx.html">xxx</a></li>
-                        
-			            </ul>
-		            </li>
-                    
+                    {%endfor%}
                 </ul>
             </div>
 

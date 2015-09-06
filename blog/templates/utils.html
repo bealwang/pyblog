@@ -1,0 +1,26 @@
+{% macro btn(value, link, type='primary') -%}
+<a href="{{link}}" target="_blank"><button class="uk-button uk-button-{{type}}" type="button">{{value}}</button></a>
+{%- endmacro %}
+
+{% macro img(src, title, alt, group = 'my_group') -%}
+<a href="{{src}}" data-uk-lightbox="{group:'{{group}}'}" title="{{title}}">
+    <img src="{{src}}" alt="{{alt}}" />
+</a>
+{%- endmacro %}
+
+{% macro alert(value, type='danger') -%}
+<div class="uk-alert uk-alert-{{type}}">
+    {% if type == 'warning' %}
+    <i class="uk-icon-warning"></i>
+    {% elif type == 'danger' %}
+    <i class="uk-icon-bug"></i>
+    {% elif type == 'success' %}
+    <i class="uk-icon-check-square"></i>
+    {% else %}
+    <i class="uk-icon-info"></i>
+    {% endif %}
+    {{value}}
+</div>
+{%- endmacro %}
+
+

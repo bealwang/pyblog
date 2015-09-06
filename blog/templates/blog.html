@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset="utf-8" >
     <meta name = "author" content = "genialwang" >
-    <meta name = "description" content="txt"><meta name = "Keywords" content="Test2">
-    <title>txt</title>
+    {{meta}}
+    <title>{{title}}</title>
 
     <link rel="stylesheet" href="../../static/css/uikit.almost-flat.min.css" />
     <link rel="stylesheet" href="../../static/css/font-awesome.min.css" />
@@ -43,21 +43,22 @@
             <div class="uk-width-medium-1-5" id="my_navigation">
                 <div data-uk-sticky="{top:60, boundary:true}">
                     <ul class="uk-dotnav uk-flex-column" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}">
-                        <li class="uk-active"><a href="#toc-0"></a></li>
-                        
-                        
+                        <li class="uk-active"><a href="#toc-0">{{item_toc[0]}}</a></li>
+                        {% set count = 1 %}
+                        {% for item in item_toc[1:] %}
+                        <li><a href="#toc-{{count}}">{{item}}</a></li>
+                        {% set count = count+1 %}
+                        {% endfor %}
                    </ul>
                 </div>
             </div>
         
             <div class="uk-width-medium-4-5 uk-container-center" id="my_blog">
                 <div class="uk-panel uk-panel-box" id="my_title">
-                    <h1>txt</h1>
+                    <h1>{{title}}</h1>
                 </div>
                 <div class="uk-panel uk-panel-box" id="my_content">
-                    <hr>
-<p>asdffasdf</p>
-
+                    {{content}}
                 </div>
             </div>
         </div>

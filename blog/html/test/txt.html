@@ -16,7 +16,14 @@
     <link rel="stylesheet" href="../../static/css/components/dotnav.almost-flat.min.css" />
     <link rel="stylesheet" href="../../static/css/components/pygments.css" />
     <link rel="stylesheet" href="../../static/css/genialwang.css" />
-    
+    <script type="text/x-mathjax-config"> 
+        MathJax.Hub.Config({ 
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} 
+        }); 
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 </head>
 <body>
     <div class="uk-margin-bottom" data-uk-sticky>
@@ -206,13 +213,5 @@ MEHI includes the basic module for image processing, like preprocessing, registr
     <script src="../../static/js/components/lightbox.min.js"></script>
     <script src="../../static/js/components/google_analytics.js"></script>
     <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2057486"></script>
-    <!--<script>
-    $('[data-uk-scrollspy]').on('inview.uk.scrollspy', function(){
-        // custom code...
-        console.log($(this).attr("id"));
-        $(".title").css("background-color","yellow");
-    });
-    </script>-->
-
 </body>
 </html>
