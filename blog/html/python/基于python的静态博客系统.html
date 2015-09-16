@@ -52,7 +52,10 @@
                         <li><a href="#toc-2">运行环境</a></li>
                         
                         
-                        <li><a href="#toc-3">搭建前端界面</a></li>
+                        <li><a href="#toc-3">构建前端框架</a></li>
+                        
+                        
+                        <li><a href="#toc-4">解析Markdown</a></li>
                         
                         
                    </ul>
@@ -90,9 +93,21 @@
 <li>pygments == 2.0.2</li>
 <li>mistune == 0.7</li>
 </ul>
-<h2 id="toc-3">搭建前端界面</h2>
-<p>一个好的前端界面可以让博客看起来简洁优雅,本文选用<a href="http://getuikit.com/">uikit</a>前端框架来实现前端界面
-的构建.</p>
+<h2 id="toc-3">构建前端框架</h2>
+<p>一个简洁优雅的前端界面可以让博客看起来更加舒适,本文结合前端框架<a href="http://getuikit.com/">uikit</a>和一些第
+三方JQuery插件进行前端界面的构建.界面采用平面化的风格,适当地添加了平滑滚动效果以增加用户体验.</p>
+<div class="uk-alert uk-alert-danger">
+
+    <i class="uk-icon-bug"></i>
+
+    博主对uikit原生的配色和布局方案可能略作改动,请谨慎使用
+</div><h2 id="toc-4">解析Markdown</h2>
+<p>得益于Mistune的使用,pyblog可以方便地将markdown文件解析为html文件.它的基本用法如下:</p>
+<div class="source"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">renderer</span> <span class="o">=</span> <span class="n">TocRenderer</span><span class="p">(</span><span class="n">linenos</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">inlinestyles</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">mdp</span> <span class="o">=</span> <span class="n">mistune</span><span class="o">.</span><span class="n">Markdown</span><span class="p">(</span><span class="n">escape</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">renderer</span><span class="o">=</span><span class="n">renderer</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
 
                 </div>
             </div>

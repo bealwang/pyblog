@@ -27,6 +27,14 @@ tags:python, 静态, 博客, seo, 代码高亮
  - pygments == 2.0.2
  - mistune == 0.7
 
-##搭建前端界面
-一个好的前端界面可以让博客看起来简洁优雅,本文选用[uikit](http://getuikit.com/)前端框架来实现前端界面
-的构建.
+##构建前端框架
+一个简洁优雅的前端界面可以让博客看起来更加舒适,本文结合前端框架[uikit](http://getuikit.com/)和一些第
+三方JQuery插件进行前端界面的构建.界面采用平面化的风格,适当地添加了平滑滚动效果以增加用户体验.
+{{ alert("博主对uikit原生的配色和布局方案可能略作改动,请谨慎使用") }}
+
+##解析Markdown
+得益于Mistune的使用,pyblog可以方便地将markdown文件解析为html文件.它的基本用法如下:
+```python
+    renderer = TocRenderer(linenos=True, inlinestyles=False)
+    mdp = mistune.Markdown(escape=True, renderer=renderer)
+```
