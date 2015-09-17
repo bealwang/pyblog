@@ -273,5 +273,6 @@ pyblog支持自定义标签,所有自定义的标签都在utils.html模板中:
 ```
 {{ alert("这些标签都是适应uikit框架的,用户可以修改适应其他的风格", "warning") }}
 
+##其他
 相关源码已托管于Github,有需要的朋友请自行下载使用.
 {{ btn("获取源码","https://github.com/genialwang/pyblog") }}
