@@ -19,7 +19,6 @@ tags:python, 静态, 博客, seo, 代码高亮
  - 博客快速生成
  - 支持markdown
  - 页面风格可定制
- - 自动SEO
 
 ##运行环境
 
@@ -223,7 +222,7 @@ def parse(text):
 </script>
 ```
 ###评论框
-pyblog主要面向的是国内的用户,所以本着尽量避免翻墙的原则,选用了国内有名的[友言](http://www.uyan.cc/)
+pyblog主要面向的是国内的用户,所以本着尽量避免翻墙的原则,选用了国内有名的[友言](http://www.uyan.cc/).
 作为评论插件.登陆注册之后将你的专属js链接加入到博客模板即可.例如博主的专属js链接如下.
 ```HTML
     <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2057486"></script>
@@ -274,7 +273,5 @@ pyblog支持自定义标签,所有自定义的标签都在utils.html模板中:
 ```
 {{ alert("这些标签都是适应uikit框架的,用户可以修改适应其他的风格", "warning") }}
 
-##SEO
-
-
+相关源码已托管于Github,有需要的朋友请自行下载使用.
 {{ btn("获取源码","https://github.com/genialwang/pyblog") }}
