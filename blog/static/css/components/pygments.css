@@ -35,7 +35,7 @@
 .source .s { color: #ed9d13 } /* Literal.String */
 .source .na { color: #bbbbbb } /* Name.Attribute */
 .source .nb { color: #24909d } /* Name.Builtin */
-.source .nc { color: #447fcf; text-decoration: underline } /* Name.Class */
+.source .nc { color: #447fcf;} /* Name.Class */
 .source .no { color: #40ffff } /* Name.Constant */
 .source .nd { color: #ffa500 } /* Name.Decorator */
 .source .ni { color: #d0d0d0 } /* Name.Entity */
