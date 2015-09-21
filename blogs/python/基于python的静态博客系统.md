@@ -39,8 +39,8 @@ tags:python, 静态, 博客, seo, 代码高亮
 首先,在pygment的帮助下,博主解决了代码高亮的问题.简单地说,pygment就是一个渲染代码的工具,它支持论坛,百
 科等等页面中的超过300种语言书写的代码的高亮.
 
-令人欣喜的是,pygment可以和Mistune配合使用来高亮markdown中的由符号{{ text("```", "success") }}包起来的代码.按照Mistune的文档重
-写block_code模块.
+令人欣喜的是,pygment可以和Mistune配合使用来高亮markdown中的由符号{{ text("```", "success") }}包起来
+的代码.按照Mistune的文档重写block_code模块.
 ```python
 #highlight.py
 import mistune
