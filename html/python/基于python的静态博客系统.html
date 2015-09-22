@@ -326,7 +326,8 @@ vim的native配色方案,更多的配色方案请参考<a href="http://pygments.
     <span class="k">return</span> <span class="n">m</span>
 </pre></div>
 </td></tr></table></div>
-<p>最后需要将HighlightMixin类和TocMixin类加进Mistune中.</p>
+<p>最后需要将<i class="uk-text-success">HighlightMixin</i>类和<i class="uk-text-success">TocMixin</i>类加进Mistune
+中.</p>
 <div class="source"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TocRenderer</span><span class="p">(</span><span class="n">highlight</span><span class="o">.</span><span class="n">HighlightMixin</span><span class="p">,</span> <span class="n">toc</span><span class="o">.</span><span class="n">TocMixin</span> <span class="p">,</span><span class="n">mistune</span><span class="o">.</span><span class="n">Renderer</span><span class="p">):</span>
     <span class="k">pass</span>
