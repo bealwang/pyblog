@@ -113,7 +113,7 @@
 <h3>代码高亮</h3>
 <p>首先,在pygment的帮助下,博主解决了代码高亮的问题.简单地说,pygment就是一个渲染代码的工具,它支持论坛,百
 科等等页面中的超过300种语言书写的代码的高亮.</p>
-<p>令人欣喜的是,pygment可以和Mistune配合使用来高亮markdown中的由符号<i class="uk-text-success">```</i>包起来
+<p>令人欣喜的是,pygment可以和Mistune配合使用来高亮markdown中的由符号<b class="uk-text-success">```</b>包起来
 的代码.按照Mistune的文档重写block_code模块.</p>
 <div class="source"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -326,7 +326,7 @@ vim的native配色方案,更多的配色方案请参考<a href="http://pygments.
     <span class="k">return</span> <span class="n">m</span>
 </pre></div>
 </td></tr></table></div>
-<p>最后需要将<i class="uk-text-success">HighlightMixin</i>类和<i class="uk-text-success">TocMixin</i>类加进Mistune
+<p>最后需要将<b class="uk-text-success">HighlightMixin</b>类和<b class="uk-text-success">TocMixin</b>类加进Mistune
 中.</p>
 <div class="source"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TocRenderer</span><span class="p">(</span><span class="n">highlight</span><span class="o">.</span><span class="n">HighlightMixin</span><span class="p">,</span> <span class="n">toc</span><span class="o">.</span><span class="n">TocMixin</span> <span class="p">,</span><span class="n">mistune</span><span class="o">.</span><span class="n">Renderer</span><span class="p">):</span>

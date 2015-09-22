@@ -24,8 +24,6 @@
 {%- endmacro %}
 
 
-{% macro text(value, type='success') -%}
-<i class="uk-text-{{type}}">{{value}}</i>
-{%- endmacro %}
+{% macro text(value, type='success') -%}<b class="uk-text-{{type}}">{{value}}</b>{%- endmacro %}
 
 
