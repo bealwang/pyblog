@@ -155,7 +155,8 @@ def findtoc(html):
     m = re.findall(r1, html)
     return m
 ```
-最后需要将HighlightMixin类和TocMixin类加进Mistune中.
+最后需要将{{ text("HighlightMixin", "success") }}类和{{ text("TocMixin", "success") }}类加进Mistune
+中.
 ```python
 class TocRenderer(highlight.HighlightMixin, toc.TocMixin ,mistune.Renderer):
     pass
