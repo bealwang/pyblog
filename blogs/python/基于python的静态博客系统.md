@@ -211,7 +211,8 @@ def parse(text):
 当然了,为了避免愚蠢的每次都解析所有的md文件,pyblog提供了批量解析和单个文件解析的方案,在此就不多说了.
 ##扩展功能
 ###数学公式
-这个不难,直接使用[mathjax](https://www.mathjax.org/),将下面的代码复制到{{ text("<body>", "success") }}标签内就可以使用了.
+这个不难,直接使用[mathjax](https://www.mathjax.org/),将下面的代码复制到
+{{ text("&lt;body&gt;", "success") }}标签内就可以使用了.
 ```HTML
 <script type="text/x-mathjax-config"> 
     MathJax.Hub.Config({ 
