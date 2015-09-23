@@ -6,8 +6,8 @@ tags:python, 静态, 博客, seo, 代码高亮
 
 - WordPress(WP):一个巨无霸的存在,但是博主在WP中并没有找到能很好支持markdown的插件.很多人离开的原因很
 简单,它看起来已经不像是一个博客了...
-- Hexo:这是一款台湾大学生的作品.相比于WP,hexo是一个基于node.js的小萝莉.作为一款轻量级的静态博客,hexo
-越来越受人青睐.
+- Hexo:这是一款台湾大学生的作品.相比于WP,hexo是一个基于node.js的小萝莉.作为一款轻量级的静态博客系统
+,hexo越来越受人青睐.
 
 好了,如果你觉得Hexo已经可以满足你的需求,那你就可以跳过本文了.但是如果你觉得WP实在是过于臃肿;如果你觉
 得Hexo仍然存在很多冗余的东西;如果你想自主开发一个简单但却不平凡的博客系统,那么你可以参考本文的做法.
@@ -211,7 +211,7 @@ def parse(text):
 当然了,为了避免愚蠢的每次都解析所有的md文件,pyblog提供了批量解析和单个文件解析的方案,在此就不多说了.
 ##扩展功能
 ###数学公式
-这个不难,直接使用[mathjax](https://www.mathjax.org/),将下面的代码复制到标签内就可以使用了.
+这个不难,直接使用[mathjax](https://www.mathjax.org/),将下面的代码复制到{{ text("<body>", "success") }}标签内就可以使用了.
 ```HTML
 <script type="text/x-mathjax-config"> 
     MathJax.Hub.Config({ 
@@ -223,7 +223,7 @@ def parse(text):
 </script>
 ```
 ###评论框
-pyblog主要面向的是国内的用户,所以本着尽量避免翻墙的原则,选用了国内有名的[友言](http://www.uyan.cc/).
+pyblog主要面向的是国内的用户,所以本着尽量避免翻墙的原则,选用了国内颇负盛名的[友言](http://www.uyan.cc/).
 作为评论插件.登陆注册之后将你的专属js链接加入到博客模板即可.例如博主的专属js链接如下.
 ```HTML
     <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2057486"></script>
