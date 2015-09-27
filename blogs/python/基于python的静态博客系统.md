@@ -209,6 +209,8 @@ def parse(text):
     return rv, text
 ```
 当然了,为了避免愚蠢的每次都解析所有的md文件,pyblog提供了批量解析和单个文件解析的方案,在此就不多说了.
+##SEO
+待补充
 ##扩展功能
 ###数学公式
 这个不难,直接使用[mathjax](https://www.mathjax.org/),将下面的代码复制到
@@ -278,3 +280,4 @@ pyblog支持自定义标签,所有自定义的标签都在utils.html模板中:
 ##其他
 相关源码已托管于Github,有需要的朋友请自行下载使用.
 {{ btn("获取源码","https://github.com/genialwang/pyblog") }}
+
