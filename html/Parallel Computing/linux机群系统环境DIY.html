@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset="utf-8" >
+    <meta name = "author" content = "genialwang" >
+    <meta name = "description" content="基于python的静态博客系统"><meta name = "Keywords" content="python, 静态, 博客, seo, 代码高亮">
+    <title>基于python的静态博客系统</title>
+
+    <link rel="stylesheet" href="../../static/css/uikit.almost-flat.min.css" />
+    <link rel="stylesheet" href="../../static/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../static/css/font-awesome-ie7.min.css" />
+    <link rel="stylesheet" href="../../static/css/components/slidenav.almost-flat.min.css" />
+    <link rel="stylesheet" href="../../static/css/highlight.css" />
+    <link rel="stylesheet" href="../../static/css/style.css" />
+    <link rel="stylesheet" href="../../static/css/components/sticky.almost-flat.min.css" />
+    <link rel="stylesheet" href="../../static/css/components/dotnav.almost-flat.min.css" />
+    <link rel="stylesheet" href="../../static/css/components/pygments.css" />
+    <link rel="stylesheet" href="../../static/css/genialwang.css" />
+    <script type="text/x-mathjax-config"> 
+        MathJax.Hub.Config({ 
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} 
+        }); 
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</head>
+<body>
+    <div class="uk-margin-bottom" data-uk-sticky>
+        <nav class="uk-navbar uk-navbar-attached uk-margin-bottom">
+            <div class="uk-container uk-container-center">
+                <a href="../../aboutme.html" class="uk-navbar-brand">GenialWang</a>
+                <ul class="uk-navbar-nav">
+                    <li><a href="../../index.html"><i class="uk-icon-book"></i> 博客</a></li>
+                    <li><a href="../../aboutme.html"><i class="uk-icon-user"></i> 关于我</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="uk-container uk-container-center">
+        <div class="uk-grid">
+            <div class="uk-width-medium-1-5" id="my_navigation">
+                <div data-uk-sticky="{top:60, boundary:true}">
+                    <ul class="uk-dotnav uk-flex-column" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}">
+                        <li class="uk-active"><a href="#toc-0"></a></li>
+                        
+                        
+                   </ul>
+                </div>
+            </div>
+        
+            <div class="uk-width-medium-4-5 uk-container-center" id="my_blog">
+                <div class="uk-panel uk-panel-box" id="my_title">
+                    <h1>基于python的静态博客系统</h1>
+                </div>
+                <div class="uk-panel uk-panel-box" id="my_content">
+                    <h1>linux集群系统环境DIY</h1>
+
+                </div>
+                <div class="uk-alert uk-alert-success">
+                    若文中有误,欢迎指正
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" onclick="gotoTop();return false;" class="totop"></a>
+
+    <div class="uk-container uk-container-center">
+        <!-- UY BEGIN -->
+        <div id="uyan_frame"></div>
+        <!-- UY END -->
+    </div>
+
+    <div class="uk-margin-large-top" style="background: #333;">
+        <div class="uk-container uk-container-center uk-text-center">
+            <div class="uk-panel uk-margin-top uk-margin-bottom">
+                <p>
+                    <a target="_blank" href="http://weibo.com/u/2935065297" class="uk-icon-button uk-icon-weibo"></a>
+                    <a target="_blank" href="https://github.com/genialwang" class="uk-icon-button uk-icon-github"></a>
+                    <a href="Mailto:wangbiao@ncic.ac.cn" class="uk-icon-button uk-icon-envelope"></a>
+                </p>
+                <p id = "info">Powered by <a href="../../aboutme.html">GenialWang</a>. Copyright &copy; 2015.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../static/js/jquery.min.js"></script>
+    <script src="../../static/js/uikit.min.js"></script>
+    <script src="../../static/js/components/sticky.min.js"></script>
+    <script src="../../static/js/components/scrollspy.min.js"></script>
+    <script src="../../static/js/components/smooth-scroll.min.js"></script>
+    <script src="../../static/js/genialwang.js"></script>
+    <script src="../../static/js/components/lightbox.min.js"></script>
+    <script src="../../static/js/components/google_analytics.js"></script>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2057486"></script>
+</body>
+</html>
