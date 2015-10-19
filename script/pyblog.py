@@ -93,15 +93,20 @@ def parse_md(md_pwd, mdp):
     args['meta'] = generate_meta(args)
     args['item_toc'] = item_toc
     render_template('blog', args)
+    return basename, args['title']
 
 def parse_md_all(mdp, md_dir="../blogs"):
+    args = dict()
+    rep = dict()
     for root, dirs, files in os.walk(md_dir):
         filter_files = filter(lambda x:os.path.splitext(x)[1]==".md", files)
         for md_files in filter_files:
             md_path = os.path.join(root, md_files)
-            parse_md(md_path, mdp)
-    args = dict()
+            basename, title = parse_md(md_path, mdp)
+            basename = os.path.splitext(basename)[0]
+            rep[basename] = title
     args['foo'] = get_file()
+    args['rep'] = rep
     render_template('index', args)
     render_template('aboutme', args)
 
