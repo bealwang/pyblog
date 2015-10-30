@@ -24,5 +24,5 @@ It have many characteristics:
 ##More Information
 Your blogs in markdown are in the directory "./blogs" by default, in which case the result blogs in html
  will be produced in the directory "./html".Of course, you can change them by modify the pyblog.py.    
-If need more details, welcome to [my blog](http://genialwang.com/html/python/基于python的静态博客系统.html).
+If need more details, welcome to [my blog](http://genialwang.com/html/python/py-1.html).
 
