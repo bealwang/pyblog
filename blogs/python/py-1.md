@@ -1,5 +1,5 @@
 title:基于python的静态博客系统
-tags:python, 静态, 博客, seo, 代码高亮      
+tags:python, 静态, 博客, 代码高亮      
 
 ##引言
 当前流行的博客系统有很多,博主简单介绍两款:
