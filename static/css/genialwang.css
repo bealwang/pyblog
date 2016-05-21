@@ -63,3 +63,13 @@
     color: #636363;
 }
 
+#margin-blog{
+    max-width:100%;
+    margin-left:0px;
+    margin-right:0px;
+}
+
+#my_grid{
+    margin-left:0px;
+    padding-left:0px;
+}
