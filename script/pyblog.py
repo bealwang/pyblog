@@ -57,7 +57,7 @@ def render_template(template_name, args):
         if 'index' == template_name or 'aboutme' == template_name:
             _pwd = '../'+template_name+'.html'
         else:
-            _pwd = os.path.join('../html', args['categories'], args['showName'])
+            _pwd = os.path.join('../html', args['categories'], args['showName']+'.html')
         _dir = os.path.dirname(_pwd)
         if not os.path.exists(_dir):
             os.makedirs(_dir)
@@ -92,9 +92,8 @@ def parse_md(md_pwd, mdp):
     args['meta'] = generate_meta(args)
     args['item_toc'] = item_toc
     args['show_url'] = "genialwang.com/html/" + categories + "/" + args['showName'] + ".html"
-    args['showName'] = args['showName'] + ".html"
     render_template('blog', args)
-    return basename, args['title']
+    return args['showName'], args['title']
 
 def parse_md_all(mdp, md_dir="../blogs"):
     args = dict()
