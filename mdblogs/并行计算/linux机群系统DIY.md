@@ -1,6 +1,7 @@
 title:linux机群系统DIY
 tags:python,静态,博客,seo,代码高亮      
 showName:pc-1
+showFile:并行计算
 
 ##情景
 没有云平台?没有昂贵,完备的并行自动化部署工具?只有计算机硬件设备?但是还是任性的想优雅的使用并行环境?

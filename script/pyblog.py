@@ -37,19 +37,6 @@ def findtoc(html):
     m = re.findall(r1, html)
     return m
 
-def get_file(path='../html/'):
-    list_files = os.listdir(path)
-    dirname = [x for x in list_files if os.path.isdir(path+x)]
-    files = []
-    for dir in dirname:
-        temp_files = os.listdir(path+dir)
-        dir_files = list(filter(lambda x: x.endswith('.html'),temp_files))
-        if dir_files:
-            dir_files = map(lambda x: os.path.splitext(x)[0],dir_files)
-            dir_files.insert(0,dir)
-            files.append(dir_files)
-    return files
-
 def render_template(template_name, args):
     env = init_jinja2()
     html = env.get_template(template_name+'.html').render(**args).encode('utf-8')
@@ -57,7 +44,7 @@ def render_template(template_name, args):
         if 'index' == template_name or 'aboutme' == template_name:
             _pwd = '../'+template_name+'.html'
         else:
-            _pwd = os.path.join('../html', args['categories'], args['showName']+'.html')
+            _pwd = os.path.join('../blogs', args['showName']+'.html')
         _dir = os.path.dirname(_pwd)
         if not os.path.exists(_dir):
             os.makedirs(_dir)
@@ -72,10 +59,8 @@ def generate_meta(args):
     p += u'<meta name="Keywords" content="' + args['tags'] + '">'
     return p
 
-def parse_md(md_pwd, mdp):
+def parse_md(md_pwd, mdp, foo, rep):
     dirname, filename = os.path.split(md_pwd)
-    basename = os.path.splitext(filename)[0]+".html"
-    categories = dirname.split("/")[-1]
     try:
         md = open(md_pwd,'r').read()
         utils = open('../templates/utils.html', 'r').read()
@@ -84,28 +69,41 @@ def parse_md(md_pwd, mdp):
         return
     mdp.renderer.reset_toc()
     args, md = meta.parse(md)
+
+    showName = unicode(args['showName'], errors='ignore')
+    showFile = unicode(args['showFile'], errors='ignore')
+    title = unicode(args['title'], errors='ignore')
+    rep[showName] = title
+    ls = foo.get(showFile, None)
+    if ls is None:
+        foo[showFile] = [showName]
+    else:
+        ls.append(showName)
+
     md = Environment().from_string(utils+md).render()
     content = mdp(md)
     item_toc = findtoc(content)
-    args['categories'] = categories
     args['content'] = content
     args['meta'] = generate_meta(args)
     args['item_toc'] = item_toc
-    args['show_url'] = "genialwang.com/html/" + categories + "/" + args['showName'] + ".html"
+    args['show_url'] = "genialwang.com/blogs/" + showName + ".html"
     render_template('blog', args)
-    return args['showName'], args['title']
+    return foo, rep
 
-def parse_md_all(mdp, md_dir="../blogs"):
+def parse_md_all(mdp, md_dir="../mdblogs"):
     args = dict()
+    foo = dict()
     rep = dict()
+    foo_file = list()
     for root, dirs, files in os.walk(md_dir):
         filter_files = filter(lambda x:os.path.splitext(x)[1]==".md", files)
         for md_files in filter_files:
             md_path = os.path.join(root, md_files)
-            basename, title = parse_md(md_path, mdp)
-            basename = os.path.splitext(basename)[0]
-            rep[basename] = title
-    args['foo'] = get_file()
+            foo, rep = parse_md(md_path, mdp, foo, rep)
+    for k, v in foo.items():
+        v.insert(0, k)
+        foo_file.append(v)
+    args['foo'] = foo_file
     args['rep'] = rep
     render_template('index', args)
     render_template('aboutme', args)
