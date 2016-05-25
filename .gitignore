@@ -2,3 +2,6 @@
 *.pyblog
 *.pyc
 .exvim.*
+/mdblogs/*
+/script/*
+/templates/*
