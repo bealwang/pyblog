@@ -57,7 +57,7 @@ def render_template(template_name, args):
         if 'index' == template_name or 'aboutme' == template_name:
             _pwd = '../'+template_name+'.html'
         else:
-            _pwd = os.path.join('../html', args['categories'], args['basename'])
+            _pwd = os.path.join('../html', args['categories'], args['showName'])
         _dir = os.path.dirname(_pwd)
         if not os.path.exists(_dir):
             os.makedirs(_dir)
@@ -68,8 +68,8 @@ def render_template(template_name, args):
         logging.error('html dir not found')
 
 def generate_meta(args):
-    p = u'<meta name = "description" content="' + args['title']  + '">'
-    p += u'<meta name = "Keywords" content="' + args['tags'] + '">'
+    p = u'<meta name="description" content="' + args['title']  + '">'
+    p += u'<meta name="Keywords" content="' + args['tags'] + '">'
     return p
 
 def parse_md(md_pwd, mdp):
@@ -88,10 +88,11 @@ def parse_md(md_pwd, mdp):
     content = mdp(md)
     item_toc = findtoc(content)
     args['categories'] = categories
-    args['basename'] = basename
     args['content'] = content
     args['meta'] = generate_meta(args)
     args['item_toc'] = item_toc
+    args['show_url'] = "genialwang.com/html/" + categories + "/" + args['showName'] + ".html"
+    args['showName'] = args['showName'] + ".html"
     render_template('blog', args)
     return basename, args['title']
 
