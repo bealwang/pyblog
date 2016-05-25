@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://genialwang.com/</title>
+  <link>http://genialwang.com/</link>
+
+<item>
+     <link>http://genialwang.com/</link>
+     <title>Genialwang</title>
+     <description>主页</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://genialwang.com/aboutme.html</link>
+     <title>Genialwang</title>
+     <description>Genialwang</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://genialwang.com/index.html</link>
+     <title>Genialwang</title>
+     <description>主页</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://genialwang.com/blogs/py-1.html</link>
+     <title>基于python的静态博客系统</title>
+     <description>基于python的静态博客系统</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://genialwang.com/blogs/pc-1.html</link>
+     <title>linux机群系统DIY</title>
+     <description>linux机群系统DIY</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
