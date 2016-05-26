@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>genialwang</title><link>http://genialwang.com</link><description>键盘上的舞者</description><language>zh-cn</language><pubDate>Thu, 26 May 2016 17:38:57 GMT</pubDate><lastBuildDate>Thu, 26 May 2016 17:38:57 GMT</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>基于python的静态博客系统</title><link>http://genialwang.com/blogs/py-1.html</link><description>&lt;h2 id="toc-0"&gt;引言&lt;/h2&gt;
+<rss version="2.0"><channel><title>genialwang</title><link>http://genialwang.com</link><description>键盘上的舞者</description><language>zh-cn</language><lastBuildDate>Thu, 26 May 2016 18:39:44 GMT</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>基于python的静态博客系统</title><link>http://genialwang.com/blogs/py-1.html?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</link><description>&lt;h2 id="toc-0"&gt;引言&lt;/h2&gt;
 &lt;p&gt;当前流行的博客系统有很多,博主简单介绍两款:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;WordPress(WP):一个巨无霸的存在,但是博主在WP中并没有找到能很好支持markdown的插件.很多人离开的原因很
@@ -459,7 +459,7 @@ HTML模板.废话不多说,解析markdown的代码如下.&lt;/p&gt;
 &lt;/div&gt;&lt;h2 id="toc-7"&gt;其他&lt;/h2&gt;
 &lt;p&gt;相关源码已托管于Github,有需要的朋友请自行下载使用.
 &lt;a href="https://github.com/genialwang/pyblog" target="_blank"&gt;&lt;button class="uk-button uk-button-primary" type="button"&gt;获取源码&lt;/button&gt;&lt;/a&gt;&lt;/p&gt;
-</description><pubDate>Wed, 25 May 2016 20:47:10 GMT</pubDate></item><item><title>linux机群系统DIY</title><link>http://genialwang.com/blogs/pc-1.html</link><description>&lt;h2 id="toc-0"&gt;情景&lt;/h2&gt;
+</description><author>genialwang</author><guid>http://genialwang.com/blogs/py-1.html</guid><pubDate>Wed, 25 May 2016 20:47:10 GMT</pubDate></item><item><title>linux机群系统DIY</title><link>http://genialwang.com/blogs/pc-1.html?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</link><description>&lt;h2 id="toc-0"&gt;情景&lt;/h2&gt;
 &lt;p&gt;没有云平台?没有昂贵,完备的并行自动化部署工具?只有计算机硬件设备?但是还是任性的想优雅的使用并行环境?
 下面就让我们一起愉快的经历DIY并行环境的历程吧...&lt;/p&gt;
 &lt;div class="uk-alert uk-alert-danger"&gt;
@@ -713,4 +713,4 @@ NFS服务器IP:共享目录  本地挂载点  nfs defaults 0 0&lt;br&gt;
 不是看起来很蠢,这本来就太蠢了...所以,我们需要一个更高效的方法,找更多的人帮你配!!好吧开个玩笑,
 我要说的是有个系统可以帮助我们,那就是大名鼎鼎的Network Information Service,小名叫NIS.但如果不
 想出事的话,你最好只是在内网使用,因为它的安全性真的不是很好.&lt;/p&gt;
-</description><pubDate>Wed, 25 May 2016 22:33:28 GMT</pubDate></item></channel></rss>
+</description><author>genialwang</author><guid>http://genialwang.com/blogs/pc-1.html</guid><pubDate>Wed, 25 May 2016 22:33:28 GMT</pubDate></item></channel></rss>
