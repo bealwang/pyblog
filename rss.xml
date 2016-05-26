@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>genialwang</title><link>http://genialwang.com</link><description>键盘上的舞者</description><language>zh-cn</language><lastBuildDate>Thu, 26 May 2016 18:39:44 GMT</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>基于python的静态博客系统</title><link>http://genialwang.com/blogs/py-1.html?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</link><description>&lt;h2 id="toc-0"&gt;引言&lt;/h2&gt;
+<rss version="2.0"><channel><title>genialwang</title><link>http://genialwang.com</link><description>键盘上的舞者</description><language>zh-cn</language><lastBuildDate>Thu, 26 May 2016 19:16:41 GMT</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>基于python的静态博客系统</title><link>http://genialwang.com/blogs/py-1.html?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=rss</link><description>&lt;h2 id="toc-0"&gt;引言&lt;/h2&gt;
 &lt;p&gt;当前流行的博客系统有很多,博主简单介绍两款:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;WordPress(WP):一个巨无霸的存在,但是博主在WP中并没有找到能很好支持markdown的插件.很多人离开的原因很
