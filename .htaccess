@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+# 绑定music.xmgho.com 到子目录music
+RewriteCond %{HTTP_HOST} ^feed\.genialwang\.com$ [NC]
+RewriteCond %{REQUEST_URI} !^/feed/
+RewriteRule ^(.*)$ feed/$1?Rewrite [L,QSA]
+#可以绑定多个 只需重复上三行代码并更改一下域名、目录名 就好了
+</IfModule>
