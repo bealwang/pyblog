@@ -1,4 +1,4 @@
-#Pyblog    
+#Pyblog
 ##关于
 pyblog是一个由python开发的静态博客系统，它有如下特点
  - 方便易用
@@ -7,10 +7,10 @@ pyblog是一个由python开发的静态博客系统，它有如下特点
  - 页面风格高度自定义
 
 ##Requirements
-- Python2.7.6
-- Jinja2 2.8
-- Pygments 2.0.2
-- mistune 0,7
+ - Python2.7.6
+ - Jinja2 2.8
+ - Pygments 2.0.2
+ - mistune 0,7
 
 ##Quick Start
     cd pyblog
