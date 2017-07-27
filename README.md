@@ -21,5 +21,5 @@ pyblog是一个由python开发的静态博客系统，它有如下特点
 ## More Information
 Your blogs in markdown are in the directory "./blogs" by default, in which case the result blogs in html
  will be produced in the directory "./html".Of course, you can change them by modify the pyblog.py.    
- For more details, welcome to [my blog](http://genialwang.com/html/python/py-1.html).
+ For more details, welcome to [my blog](http://genialwang.github.io/blogs/py-1.html).
 
