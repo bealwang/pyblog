@@ -5,13 +5,13 @@ pyblog是一个由python开发的静态博客系统，它有如下特点
  - 生成博客迅速
  - markdown博客转换为html
  - 页面风格高度自定义
-
+ 
 ##Requirements
  - Python2.7.6
  - Jinja2 2.8
  - Pygments 2.0.2
  - mistune 0,7
-
+ 
 ##Quick Start
     cd pyblog
     pip install -r requirements.txt
