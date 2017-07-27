@@ -1,4 +1,4 @@
-#Pyblog
+#Pyblog    
 ##About
 Pyblog is a static blog system based on python.    
 It have many characteristics:
@@ -8,14 +8,12 @@ It have many characteristics:
 - Page style can be customized
 
 ##Requirements
-
 - Python2.7.6
 - Jinja2 2.8
 - Pygments 2.0.2
 - mistune 0,7
 
 ##Quick Start
-
     cd pyblog
     pip install -r requirements.txt
     cd script
